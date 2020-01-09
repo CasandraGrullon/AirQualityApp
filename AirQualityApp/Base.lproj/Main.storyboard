@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Country View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AirQualityApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CountryViewController" customModule="AirQualityApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,24 +37,28 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Dza-4s-ENo"/>
+                    <connections>
+                        <outlet property="searchBar" destination="IDT-PE-0su" id="6Zy-Eh-iKJ"/>
+                        <outlet property="tableView" destination="9pX-kp-MIo" id="dTw-2i-wkq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="823" y="117"/>
         </scene>
-        <!--View Controller-->
+        <!--Air Quality View Controller-->
         <scene sceneID="AzN-Rj-7fE">
             <objects>
-                <viewController id="g7B-Mx-WhL" sceneMemberID="viewController">
+                <viewController id="g7B-Mx-WhL" customClass="AirQualityViewController" customModule="AirQualityApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c5V-kd-tNI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="djw-PP-32a">
-                                <rect key="frame" x="0.0" y="44" width="414" height="448"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="537.5"/>
                             </mapView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D6C-fI-yFq">
-                                <rect key="frame" x="8" y="512" width="398" height="60"/>
+                                <rect key="frame" x="8" y="601.5" width="398" height="60"/>
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="u6Z-dt-Jiq">
                                         <rect key="frame" x="-2" y="15" width="402" height="31"/>
@@ -72,12 +76,12 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KaL-Rg-ZSB">
-                                <rect key="frame" x="158.5" y="840" width="97" height="30"/>
+                                <rect key="frame" x="154" y="704.5" width="106" height="55"/>
+                                <fontDescription key="fontDescription" name="NotoNastaliqUrdu" family="Noto Nastaliq Urdu" pointSize="17"/>
                                 <state key="normal" title="Latest Results"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Air Quality value average" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MNA-33-MN2">
-                                <rect key="frame" x="8" y="634" width="398" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Air Quality value average" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MNA-33-MN2">
+                                <rect key="frame" x="8" y="669.5" width="398" height="27"/>
                                 <fontDescription key="fontDescription" name="NotoSansKannada-Regular" family="Noto Sans Kannada" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -89,10 +93,13 @@
                             <constraint firstItem="D6C-fI-yFq" firstAttribute="top" secondItem="djw-PP-32a" secondAttribute="bottom" constant="20" id="Fjc-Sg-ncr"/>
                             <constraint firstItem="Axx-G6-ZX2" firstAttribute="trailing" secondItem="djw-PP-32a" secondAttribute="trailing" id="Hp5-GN-bfm"/>
                             <constraint firstItem="D6C-fI-yFq" firstAttribute="leading" secondItem="Axx-G6-ZX2" secondAttribute="leading" constant="8" id="KGe-VL-fm9"/>
-                            <constraint firstItem="djw-PP-32a" firstAttribute="height" secondItem="c5V-kd-tNI" secondAttribute="height" multiplier="0.5" id="OP0-65-gtR"/>
+                            <constraint firstItem="djw-PP-32a" firstAttribute="height" secondItem="c5V-kd-tNI" secondAttribute="height" multiplier="0.6" id="OP0-65-gtR"/>
+                            <constraint firstItem="Axx-G6-ZX2" firstAttribute="trailing" secondItem="MNA-33-MN2" secondAttribute="trailing" constant="8" id="TeZ-hA-4ii"/>
                             <constraint firstItem="KaL-Rg-ZSB" firstAttribute="centerX" secondItem="c5V-kd-tNI" secondAttribute="centerX" id="Tmz-Yo-MmT"/>
+                            <constraint firstItem="MNA-33-MN2" firstAttribute="top" secondItem="D6C-fI-yFq" secondAttribute="bottom" constant="8" id="Vnp-71-e2D"/>
+                            <constraint firstItem="KaL-Rg-ZSB" firstAttribute="top" secondItem="MNA-33-MN2" secondAttribute="bottom" constant="8" id="WP7-ce-oVT"/>
                             <constraint firstItem="Axx-G6-ZX2" firstAttribute="trailing" secondItem="D6C-fI-yFq" secondAttribute="trailing" constant="8" id="WX5-S6-8Vb"/>
-                            <constraint firstItem="KaL-Rg-ZSB" firstAttribute="bottom" secondItem="Axx-G6-ZX2" secondAttribute="bottom" constant="8" id="bQp-Im-mxo"/>
+                            <constraint firstItem="MNA-33-MN2" firstAttribute="leading" secondItem="Axx-G6-ZX2" secondAttribute="leading" constant="8" id="Zsr-YK-oX4"/>
                             <constraint firstItem="djw-PP-32a" firstAttribute="top" secondItem="Axx-G6-ZX2" secondAttribute="top" id="z98-R0-eCY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Axx-G6-ZX2"/>

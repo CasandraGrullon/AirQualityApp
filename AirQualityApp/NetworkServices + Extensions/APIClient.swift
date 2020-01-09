@@ -9,7 +9,7 @@
 import Foundation
 
 struct AirQualityAPIClient {
-    static func getCountries(completion: @escaping (Result<[Country], AppError>) -> () ){
+    static func getCountries(completion: @escaping (Result<Country, AppError>) -> () ){
         
         let endpointURL = "https://api.openaq.org/v1/countries"
         
@@ -26,9 +26,8 @@ struct AirQualityAPIClient {
                 completion(.failure(.networkClientError(appError)))
             case .success(let data):
                 do{
-                    let countryResults = try JSONDecoder().decode(CountryResults.self, from: data)
-                    let country = countryResults.results
-                    completion(.success(country))
+                    let countryResults = try JSONDecoder().decode(Country.self, from: data)
+                    completion(.success(countryResults))
                 }catch{
                     completion(.failure(.decodingError(error)))
                 }

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		C66D3AAB23C798AC002AE545 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66D3AAA23C798AC002AE545 /* AppDelegate.swift */; };
 		C66D3AAD23C798AC002AE545 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66D3AAC23C798AC002AE545 /* SceneDelegate.swift */; };
-		C66D3AAF23C798AC002AE545 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66D3AAE23C798AC002AE545 /* ViewController.swift */; };
+		C66D3AAF23C798AC002AE545 /* CountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66D3AAE23C798AC002AE545 /* CountryViewController.swift */; };
 		C66D3AB223C798AC002AE545 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C66D3AB023C798AC002AE545 /* Main.storyboard */; };
 		C66D3AB423C798B1002AE545 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C66D3AB323C798B1002AE545 /* Assets.xcassets */; };
 		C66D3AB723C798B1002AE545 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C66D3AB523C798B1002AE545 /* LaunchScreen.storyboard */; };
@@ -23,6 +23,9 @@
 		C66D3ADB23C7BF82002AE545 /* ShowAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66D3ADA23C7BF82002AE545 /* ShowAlert.swift */; };
 		C66D3ADD23C7BF98002AE545 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66D3ADC23C7BF98002AE545 /* ImageView.swift */; };
 		C66D3ADF23C7BFBB002AE545 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66D3ADE23C7BFBB002AE545 /* APIClient.swift */; };
+		C66D3AE123C7C68A002AE545 /* AirQualityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66D3AE023C7C68A002AE545 /* AirQualityViewController.swift */; };
+		C678E7B423C7CDCE000EDB69 /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C678E7B323C7CDCE000EDB69 /* CityCell.swift */; };
+		C678E7B623C7CE47000EDB69 /* CityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C678E7B523C7CE47000EDB69 /* CityCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +42,7 @@
 		C66D3AA723C798AC002AE545 /* AirQualityApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirQualityApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C66D3AAA23C798AC002AE545 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C66D3AAC23C798AC002AE545 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C66D3AAE23C798AC002AE545 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C66D3AAE23C798AC002AE545 /* CountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewController.swift; sourceTree = "<group>"; };
 		C66D3AB123C798AC002AE545 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C66D3AB323C798B1002AE545 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C66D3AB623C798B1002AE545 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,6 +59,9 @@
 		C66D3ADA23C7BF82002AE545 /* ShowAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAlert.swift; sourceTree = "<group>"; };
 		C66D3ADC23C7BF98002AE545 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		C66D3ADE23C7BFBB002AE545 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		C66D3AE023C7C68A002AE545 /* AirQualityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityViewController.swift; sourceTree = "<group>"; };
+		C678E7B323C7CDCE000EDB69 /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
+		C678E7B523C7CE47000EDB69 /* CityCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +105,11 @@
 			children = (
 				C66D3AD523C7BE9E002AE545 /* NetworkServices + Extensions */,
 				C66D3ACC23C798E4002AE545 /* Model */,
+				C66D3AE223C7C694002AE545 /* Controllers */,
+				C678E7B223C7CDA5000EDB69 /* View */,
+				C66D3AB023C798AC002AE545 /* Main.storyboard */,
 				C66D3AAA23C798AC002AE545 /* AppDelegate.swift */,
 				C66D3AAC23C798AC002AE545 /* SceneDelegate.swift */,
-				C66D3AAE23C798AC002AE545 /* ViewController.swift */,
-				C66D3AB023C798AC002AE545 /* Main.storyboard */,
 				C66D3AB323C798B1002AE545 /* Assets.xcassets */,
 				C66D3AB523C798B1002AE545 /* LaunchScreen.storyboard */,
 				C66D3AB823C798B1002AE545 /* Info.plist */,
@@ -140,6 +147,24 @@
 				C66D3ADE23C7BFBB002AE545 /* APIClient.swift */,
 			);
 			path = "NetworkServices + Extensions";
+			sourceTree = "<group>";
+		};
+		C66D3AE223C7C694002AE545 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C66D3AAE23C798AC002AE545 /* CountryViewController.swift */,
+				C66D3AE023C7C68A002AE545 /* AirQualityViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C678E7B223C7CDA5000EDB69 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C678E7B323C7CDCE000EDB69 /* CityCell.swift */,
+				C678E7B523C7CE47000EDB69 /* CityCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,6 +250,7 @@
 			files = (
 				C66D3AB723C798B1002AE545 /* LaunchScreen.storyboard in Resources */,
 				C66D3AB423C798B1002AE545 /* Assets.xcassets in Resources */,
+				C678E7B623C7CE47000EDB69 /* CityCell.xib in Resources */,
 				C66D3AB223C798AC002AE545 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,10 +276,12 @@
 				C66D3ADD23C7BF98002AE545 /* ImageView.swift in Sources */,
 				C66D3AD023C7B1DA002AE545 /* City.swift in Sources */,
 				C66D3ADB23C7BF82002AE545 /* ShowAlert.swift in Sources */,
-				C66D3AAF23C798AC002AE545 /* ViewController.swift in Sources */,
+				C66D3AAF23C798AC002AE545 /* CountryViewController.swift in Sources */,
+				C66D3AE123C7C68A002AE545 /* AirQualityViewController.swift in Sources */,
 				C66D3AAB23C798AC002AE545 /* AppDelegate.swift in Sources */,
 				C66D3AD223C7B26B002AE545 /* Measurements.swift in Sources */,
 				C66D3AAD23C798AC002AE545 /* SceneDelegate.swift in Sources */,
+				C678E7B423C7CDCE000EDB69 /* CityCell.swift in Sources */,
 				C66D3ADF23C7BFBB002AE545 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
