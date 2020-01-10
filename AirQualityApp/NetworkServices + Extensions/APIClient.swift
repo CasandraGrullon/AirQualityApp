@@ -9,7 +9,7 @@
 import Foundation
 
 struct AirQualityAPIClient {
-    static func getCountries(completion: @escaping (Result<Country, AppError>) -> () ){
+    static func getCountries(completion: @escaping (Result<[Country], AppError>) -> () ){
         
         let endpointURL = "https://api.openaq.org/v1/countries"
         
@@ -26,17 +26,18 @@ struct AirQualityAPIClient {
                 completion(.failure(.networkClientError(appError)))
             case .success(let data):
                 do{
-                    let countryResults = try JSONDecoder().decode(Country.self, from: data)
-                    completion(.success(countryResults))
+                    let countryResults = try JSONDecoder().decode(CountryResults.self, from: data)
+                    let country = countryResults.results
+                    completion(.success(country))
                 }catch{
                     completion(.failure(.decodingError(error)))
                 }
             }
         }
     }
-    static func getCities(completion: @escaping (Result<[City], AppError>) -> () ) {
+    static func getCities(for country: String, completion: @escaping (Result<[City], AppError>) -> () ) {
         
-        let endpointURL = "https://api.openaq.org/v1/cities"
+        let endpointURL = "https://api.openaq.org/v1/cities?country=\(country)"
         
         guard let url = URL(string: endpointURL) else {
             completion(.failure(.badURL(endpointURL)))
@@ -60,9 +61,9 @@ struct AirQualityAPIClient {
             }
         }
     }
-    static func getMeasurements(completion: @escaping (Result<[AirQuality], AppError>) -> () ){
+    static func getMeasurements(for city: String, completion: @escaping (Result<[AirQuality], AppError>) -> () ){
         
-        let endpointURL = "https://api.openaq.org/v1/measurements"
+        let endpointURL = "https://api.openaq.org/v1/measurements?city=\(city)"
         
         guard let url = URL(string: endpointURL) else {
             completion(.failure(.badURL(endpointURL)))
@@ -86,9 +87,9 @@ struct AirQualityAPIClient {
             }
         }
     }
-    static func getLatestResults(completion: @escaping (Result<[Latest], AppError>) -> () ){
+    static func getLatestResults(for city: String, completion: @escaping (Result<[Latest], AppError>) -> () ){
         
-        let endpointURL = "https://api.openaq.org/v1/latest"
+        let endpointURL = "https://api.openaq.org/v1/latest?city=\(city)"
         
         guard let url = URL(string: endpointURL) else {
             completion(.failure(.badURL(endpointURL)))

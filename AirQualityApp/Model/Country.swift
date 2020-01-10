@@ -12,6 +12,6 @@ struct CountryResults: Codable {
     let results: [Country]
 }
 struct Country: Codable {
-    let code: String
-    let name: String
+    let code: String?
+    let name: String?
 }

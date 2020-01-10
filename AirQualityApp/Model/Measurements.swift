@@ -12,14 +12,13 @@ struct AirQualityResults: Codable {
     let results: [AirQuality]
 }
 struct AirQuality: Codable {
-    let location: String
-    let value: Int
-    let unit: String
-    let coordinates: Coordinates
-    let country: String
-    let city: String
+    let location: String?
+    let value: Double?
+    let unit: String?
+    let coordinates: Coordinates?
+    let country: String?
 }
 struct Coordinates: Codable {
-    let latitude: Double
-    let longitude: Double
+    let latitude: Double?
+    let longitude: Double?
 }

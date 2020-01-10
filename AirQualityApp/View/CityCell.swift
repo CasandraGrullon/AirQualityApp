@@ -11,14 +11,12 @@ import UIKit
 class CityCell: UITableViewCell {
 
     @IBOutlet weak var cityLabel: UILabel!
-    
     @IBOutlet weak var countryLabel: UILabel!
     
     var city: City?
-    var country: Country?
     
-    func configureCell(for city: City, for country: String){
+    func configureCell(for city: City){
         cityLabel.text = city.name
-        countryLabel.text = country
+        countryLabel.text = city.country
     }
 }
