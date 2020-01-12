@@ -49,7 +49,7 @@
         <!--Air Quality View Controller-->
         <scene sceneID="AzN-Rj-7fE">
             <objects>
-                <viewController id="g7B-Mx-WhL" customClass="AirQualityViewController" customModule="AirQualityApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AirQualityDetails" id="g7B-Mx-WhL" customClass="AirQualityViewController" customModule="AirQualityApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c5V-kd-tNI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

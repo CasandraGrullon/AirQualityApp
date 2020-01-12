@@ -10,6 +10,8 @@ import UIKit
 
 class AirQualityViewController: UIViewController {
 
+    var airQuality: AirQuality?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
