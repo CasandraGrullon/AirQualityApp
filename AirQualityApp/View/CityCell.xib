@@ -21,25 +21,35 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vB2-71-hjT">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZwJ-WQ-Q2o">
                         <rect key="frame" x="8" y="49" width="492" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vB2-71-hjT">
+                        <rect key="frame" x="8" y="90" width="492" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="vB2-71-hjT" firstAttribute="leading" secondItem="cAm-Ol-6zP" secondAttribute="leading" constant="8" id="0Jv-rO-EnJ"/>
-                    <constraint firstAttribute="trailing" secondItem="qL2-hU-Loq" secondAttribute="trailing" constant="8" id="0rf-e4-Dhq"/>
-                    <constraint firstAttribute="trailing" secondItem="vB2-71-hjT" secondAttribute="trailing" constant="8" id="K9J-tp-rfh"/>
-                    <constraint firstItem="qL2-hU-Loq" firstAttribute="top" secondItem="cAm-Ol-6zP" secondAttribute="top" constant="20" id="NRo-l6-jMs"/>
-                    <constraint firstItem="vB2-71-hjT" firstAttribute="top" secondItem="qL2-hU-Loq" secondAttribute="bottom" constant="8" id="hqg-0i-GsN"/>
-                    <constraint firstItem="qL2-hU-Loq" firstAttribute="leading" secondItem="cAm-Ol-6zP" secondAttribute="leading" constant="8" id="ky6-zC-6rq"/>
+                    <constraint firstAttribute="trailing" secondItem="vB2-71-hjT" secondAttribute="trailing" constant="8" id="4iQ-ba-uEx"/>
+                    <constraint firstItem="ZwJ-WQ-Q2o" firstAttribute="leading" secondItem="cAm-Ol-6zP" secondAttribute="leading" constant="8" id="BGq-2T-WA0"/>
+                    <constraint firstItem="vB2-71-hjT" firstAttribute="leading" secondItem="cAm-Ol-6zP" secondAttribute="leading" constant="8" id="CXu-4Z-BuJ"/>
+                    <constraint firstAttribute="trailing" secondItem="ZwJ-WQ-Q2o" secondAttribute="trailing" constant="8" id="HPj-nx-LVR"/>
+                    <constraint firstAttribute="trailing" secondItem="qL2-hU-Loq" secondAttribute="trailing" constant="8" id="MQH-H7-XE8"/>
+                    <constraint firstItem="ZwJ-WQ-Q2o" firstAttribute="top" secondItem="qL2-hU-Loq" secondAttribute="bottom" constant="8" id="TKE-R4-7g1"/>
+                    <constraint firstItem="qL2-hU-Loq" firstAttribute="leading" secondItem="cAm-Ol-6zP" secondAttribute="leading" constant="8" id="eM9-Ia-WOM"/>
+                    <constraint firstItem="vB2-71-hjT" firstAttribute="top" secondItem="ZwJ-WQ-Q2o" secondAttribute="bottom" constant="20" id="tyu-dd-bit"/>
+                    <constraint firstItem="qL2-hU-Loq" firstAttribute="top" secondItem="cAm-Ol-6zP" secondAttribute="top" constant="20" id="ui2-Mh-7KC"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="cityLabel" destination="qL2-hU-Loq" id="OJy-Fc-fjU"/>
                 <outlet property="countryLabel" destination="vB2-71-hjT" id="inn-T3-P92"/>
+                <outlet property="locationLabel" destination="ZwJ-WQ-Q2o" id="VFE-M5-tEW"/>
             </connections>
             <point key="canvasLocation" x="-4.3478260869565224" y="99.107142857142847"/>
         </tableViewCell>

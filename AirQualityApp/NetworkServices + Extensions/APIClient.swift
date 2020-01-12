@@ -62,8 +62,8 @@ struct AirQualityAPIClient {
         }
     }
     static func getMeasurements(for city: String, completion: @escaping (Result<[AirQuality], AppError>) -> () ){
-        
-        let endpointURL = "https://api.openaq.org/v1/measurements?city=\(city)"
+        let cityNoSpaces = city.lowercased().addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? "bejing"
+        let endpointURL = "https://api.openaq.org/v1/measurements?city=\(cityNoSpaces)"
         
         guard let url = URL(string: endpointURL) else {
             completion(.failure(.badURL(endpointURL)))
