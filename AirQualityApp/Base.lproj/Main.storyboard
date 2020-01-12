@@ -44,7 +44,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="823" y="117"/>
+            <point key="canvasLocation" x="821.73913043478262" y="116.51785714285714"/>
         </scene>
         <!--Air Quality View Controller-->
         <scene sceneID="AzN-Rj-7fE">
